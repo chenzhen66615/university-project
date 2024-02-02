@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+  body{background:url(foot.jpg);}
+	#newsimg{
+		text-align: center;
+	float: left;
+	background-color: rgba(125,125,0,0.8);
+	width: 800px;
+	height: 460px;
+	margin: 0;
+	padding: 0;
+}
+#newsimg img{margin:0 auto;width: 800px;height: 400px;padding: 0;text-align: center;}
+#newsimg li{float:left;margin:0;width: 150px;height: 30px;padding: 0;font-size: 20px;}
+#newsimg span{width: 80px;height: 30px;margin: 10px auto;}
+#newsimg li:hover{background: #ff33ff;}
+#newimg li:hover a{color: #ffcc00;}
+.img1{display: block;}.img2{display: none;}.img3{display: none;}.img4{display: none;}.img5{display: none;}
+#content{
+	text-align: center;
+	float: left;
+	background-color: rgba(150,150,150,0.8);
+	width: 400px;
+	height: 460px;
+	margin-top: 0px;
+	padding: 0;
+  overflow: hidden;
+}
+#content li{float: left;width: 80px;margin:5px;height: 30px;padding: 0;font-size: 24px;font-family: "Microsoft YaHei"}
+#content li:hover{background:yellow;}
+#conten li:hover a{color: #ffcc00;}
+#content span{width: 60px;height: 30px;margin: 16px;}
+#content h1{border-style: solid;border-radius: 2px;border-width: 2px;width: 40px;color: red;font-size: 16px;font-family: "Microsoft YaHei";margin-left: 10px;white-space: nowrap;}
+#content h2{font-family: "Microsoft YaHei";font-size: 16px;color: white;white-space: nowrap; float: left;}
+#right{
+	width: 215px;
+	height: 400px;
+	float: left;
+	margin-top: 0px;
+	padding: 0;
+}ul{list-style-type:none; }a{text-decoration: none;}</style>
+<script type="text/javascript">
+  var index=0;
+    //改变图片
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("imgslide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,2000);
+</script>
+</head>
+<body>
+	 <div id="newsimg">
+      <a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507884&tid=727670" target="showframe"><img class="imgslide img1" src="i1.jpeg" title="查看详情"></a>
+      <a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507804&tid=727463" target="showframe"><img class="imgslide img2" src="i2.jpeg" title="查看详情"></a>
+      <a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507807&tid=727820" target="showframe"><img class="imgslide img3" src="i3.jpeg" title="查看详情"></a>
+      <a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507803&tid=727179" target="showframe"><img class="imgslide img4" src="i4.jpeg" title="查看详情"></a>
+      <a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507838&tid=728294" target="showframe"><img class="imgslide img5" src="i5.jpeg" title="查看详情"></a>
+      <ul>
+        <li><span><a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507884&tid=727670" target="showframe">梦奇家族CG</a></span></li>
+        <li><span><a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507804&tid=727463" target="showframe">超神时刻</a></span></li>
+        <li><span><a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507807&tid=727820" target="showframe">最佳选手</a></span></li>
+        <li><span><a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507803&tid=727179" target="showframe">葛大爷情报站</a></span></li>
+        <li><span><a href="http://pvp.qq.com/v/detail.shtml?G_Biz=18&e_code=507838&tid=728294" target="showframe">虎牙QQ名人赛</a></span></li>
+      </ul>
+    </div>
+    <div id="content">
+       <ul>
+        <li><span><a href="foot.html">热门</a></span></li>
+        <li><span><a href="新闻foot.html" >新闻</a></span></li>
+        <li><span><a href="公告foot.html" >公告</a></span></li>
+        <li><span><a href="赛事foot.html" >赛事</a></span></li>
+      </ul>
+      <br/><br/>
+      <hr color="green"/ width="400px">
+      <table>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=518774" target="showframe"><h2>赛点搬到家门口|第三届王者荣耀全国大赛城市赛道盛况空前，王者人生助力全民绽放电竞</h2></a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=519274" target="showframe"><h2>集合，目标武汉总决赛！全国大赛城市赛道第一期晋级资格赛战队巡礼</h2></a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=519051" target="showframe"><h2>全国大赛全国行｜这个五一你参赛了吗？第三届王者荣耀全国大赛第一期大区决赛完美收官</h2></a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=518988" target="showframe"><h2>大神主播与民间高手巅峰相遇，王者荣耀全国大赛合作赛道第三届企鹅大神杯正赛开赛在即</h2></a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=519273" target="showframe"><h2>第三届王者荣耀全国大赛福建省第二期省赛悬念揭晓！快来救救我战队问鼎八闽之巅！</h2></a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=519245" target="showframe"><h2>第三届王者荣耀全国大赛福建省海选赛泉州领SHOW天地站圆满落幕！电竞赋能“文旅+</h2></a></td>
+        </tr>
+        <tr>
+          <td colspan="4"><h1 style="color:#cc00ff">赛事</h1></td>
+          <td><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=519176" target="showframe"><h2>第三届王者荣耀全国大赛福建省海选赛莆田万达站圆满收官</h2></a></td>
+        </tr>
+      </table>   
+    </div>
+</body>
+</html>

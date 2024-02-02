@@ -1,0 +1,85 @@
+.bodylogin{
+	background: url(login.jpg) no-repeat fixed center;
+	background-size: 100% 100%;
+}
+.QQbody{
+	background:url(qqlogin.jpg) no-repeat fixed center; background-size: 100% 100%;
+}
+.QQlogin1{
+	height: 200px;
+}
+
+.QQlogin2{
+	background-size: 300px 200px;
+	text-align: center;
+	margin: 0 auto;
+}
+.WXbody{background:url(wxlogin.jpg) no-repeat fixed center; background-size: 100% 100%;}
+.login1{
+	height: 300px;
+}
+.login1 img{margin:50px 730px;width: 200px;height: 200px;border-radius: 10px;}
+.login2{
+	text-align: center;
+	margin: 0 auto;	
+}
+
+.formlogin{
+	    margin:0 auto;
+		background:#66ffcc;
+		border:12px inset #ff0000;
+		width:300px;
+		height:200px;
+		text-align:center;
+		padding: 30px;
+}
+
+.registrationbody{
+	background: url(registration.jpg) no-repeat fixed center;
+	background-size: 100% 100%;
+}
+.registration1{
+	height: 150px;
+}
+
+.registration2{
+    text-align: center;
+	margin: 0 auto;	
+}
+
+.formset{
+	margin: 0 auto;
+	background: #e0ffff;
+	border:12px inset #00ff00;
+	width:300px;
+	height:400px;
+	text-align:center;
+	padding: 30px;
+}
+
+
+.wxbutton{
+  border: 0;
+  width: 15em;
+  height: 3em;
+  border-radius: 6.6666666667px;
+  background-color: #66cc00;
+  font-size: 1.6em;
+  font-family: 黑体;
+  position: relative;
+
+}
+.qqbutton{
+  border: 0;
+  width: 15em;
+  height: 3em;
+  border-radius: 6.6666666667px;
+  background-color: #33ccff;
+  font-size: 1.6em;
+  font-family: 黑体;
+  position: relative;
+ 
+}
+
+
+
