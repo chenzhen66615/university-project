@@ -1,0 +1,69 @@
+#include<stdio.h>
+#include<curses.h>
+#include<signal.h>
+#include<string.h>
+#include<sys/time.h>
+
+#define MESSAGE "o"
+#define BLANK " "
+
+int row=10;
+int col=0;
+int cdir=1;//col dir
+int rdir=1;//row dir
+int delay=100;
+
+int main()
+{
+	void on_alarm(int);
+	
+	initscr();
+	crmode();
+	noecho();
+	clear();
+	mvaddstr(row,col,MESSAGE);
+	standout();
+	move(LINES-1,COLS-1);
+	refresh();
+	signal(SIGALRM,on_alarm);
+	set_ticker(delay);
+	while(1)
+		pause();
+	endwin();
+	return 0;
+}
+
+void on_alarm(int signum)
+{
+	signal(SIGALRM,on_alarm);
+	mvaddstr(row,col,BLANK);
+	col+=cdir;
+	row+=rdir;
+	mvaddstr(row,col,MESSAGE);
+	move(LINES-1,COLS-1);
+	refresh();
+	if(rdir==1&&row>=LINES-1)
+		rdir=-1;
+	else if(rdir==-1&&row<=0)
+		rdir=1;
+	if(cdir==1&&col>=COLS-1)
+		cdir=-1;
+	else if(cdir==-1&&col<=0)
+		cdir=1;
+}
+
+set_ticker( n_msecs )
+{
+        struct itimerval new_timeset;
+        long    n_sec, n_usecs;
+
+        n_sec = n_msecs / 1000 ;
+        n_usecs = ( n_msecs % 1000 ) * 1000L ;
+
+        new_timeset.it_interval.tv_sec  = n_sec;        
+        new_timeset.it_interval.tv_usec = n_usecs;    
+        new_timeset.it_value.tv_sec     = n_sec  ;     
+        new_timeset.it_value.tv_usec    = n_usecs ;     
+
+	return setitimer(ITIMER_REAL, &new_timeset, NULL);
+}
